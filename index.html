@@ -144,6 +144,14 @@ section{padding:104px 0}
 .pinc span::before{content:"+";color:var(--accent);font-weight:800}
 .pcta{margin-top:auto;padding:13px 20px;font-size:14.5px;justify-content:center}
 .pinc{flex-grow:0}
+.rate{border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface);overflow:hidden;margin-top:var(--sp-5)}
+.rate-row{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:18px 24px;border-top:1px solid var(--line);align-items:center;transition:background .2s}
+.rate-row:first-child{border-top:none}
+.rate-row:hover{background:var(--surface-2)}
+.rate-row .ch{font-weight:700;font-size:16px;letter-spacing:-.2px}
+.rate-row .nu{color:var(--text-3);font-size:13px}
+.rate-row .pr{text-align:right;font-weight:800;font-size:17px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rate-row .pr small{display:block;font-weight:500;font-size:12px;color:var(--text-3);letter-spacing:0}
 .pnote{margin-top:28px;color:var(--text-2);font-size:14.5px;border:1px solid var(--line);border-radius:var(--r-md);padding:20px 24px;background:var(--surface)}
 .pnote b{color:var(--text-1)}
 /* process */
@@ -192,7 +200,7 @@ TECH<span style="color:var(--accent)">RIDY</span>
 <div class="links">
 <a class="lnk" href="#proof">Proof of plays</a>
 <a class="lnk" href="#media">Media</a>
-<a class="lnk" href="#packages">Packages</a>
+<a class="lnk" href="#rates">Rate card</a>
 <a class="lnk" href="#faq">FAQ</a>
 <a class="navcta" href="#contact">WhatsApp me</a>
 </div>
@@ -267,45 +275,40 @@ TECH<span style="color:var(--accent)">RIDY</span>
 <p class="lede rv">One seller across the full stack, from roadside billboards to programmatic display, so your budget follows performance instead of habit.</p>
 <div class="grid">
 <div class="card mcard rv d1"><div class="num">M1</div><h3>Outdoor digital</h3><p>Billboards, malls, gyms, fuel stations, medical centres and office towers. Planned on a map, paid per play, proof for every play.</p><div class="pp">from <b>R0.90</b> per play</div></div>
-<div class="card mcard rv d1"><div class="num">M2</div><h3>Programmatic display and native</h3><p>Real time bidding across premium and long tail inventory. Brand safe, bought at what the impression is worth.</p><div class="pp">bought per impression</div></div>
-<div class="card mcard rv d2"><div class="num">M3</div><h3>Paid social</h3><p>Meta, TikTok and LinkedIn. Audience-built campaigns, creative tested in structured batches, budget shifted daily.</p><div class="pp">bought per result</div></div>
-<div class="card mcard rv d2"><div class="num">M4</div><h3>Search and shopping</h3><p>Intent capture done properly: tight structure, honest keyword math, landing pages that respect the click.</p><div class="pp">bought per click</div></div>
-<div class="card mcard rv d3"><div class="num">M5</div><h3>Video and CTV</h3><p>Online video and connected TV bought programmatically, measured with the same discipline as display.</p><div class="pp">bought per view</div></div>
-<div class="card mcard rv d3"><div class="num">M6</div><h3>Retargeting</h3><p>The people who already showed up, brought back. The cheapest media you will ever buy, once the traffic exists.</p><div class="pp">bought per impression</div></div>
+<div class="card mcard rv d1"><div class="num">M2</div><h3>Programmatic display and native</h3><p>Real time bidding across premium and long tail inventory. Brand safe, bought at what the impression is worth.</p><div class="pp">from <b>R45</b> CPM</div></div>
+<div class="card mcard rv d2"><div class="num">M3</div><h3>Paid social</h3><p>Meta, TikTok and LinkedIn. Audience-built campaigns, creative tested in structured batches, budget shifted daily.</p><div class="pp">from <b>R50</b> CPM</div></div>
+<div class="card mcard rv d2"><div class="num">M4</div><h3>Search and shopping</h3><p>Intent capture done properly: tight structure, honest keyword math, landing pages that respect the click.</p><div class="pp">from <b>R12</b> per click</div></div>
+<div class="card mcard rv d3"><div class="num">M5</div><h3>Video and CTV</h3><p>Online video and connected TV bought programmatically, measured with the same discipline as display.</p><div class="pp">from <b>R95</b> CPM, CTV from R180</div></div>
+<div class="card mcard rv d3"><div class="num">M6</div><h3>Retargeting</h3><p>The people who already showed up, brought back. The cheapest media you will ever buy, once the traffic exists.</p><div class="pp">from <b>R30</b> CPM</div></div>
 </div>
 </div>
 </section>
 
-<section id="packages">
+<section id="rates">
 <div class="wrap">
-<div class="sec-head rv"><span class="idx">03</span><span class="kicker" style="margin:0">Packages</span></div>
-<h2 class="rv">Priced like media.<br>Not like an agency.</h2>
-<p class="lede rv">Every package splits cleanly into media and management, in writing. Proof of plays included at every level, no exceptions.</p>
-<div class="pgrid">
-<div class="card pcard rv d1">
-<div class="pname">Starter</div>
-<div class="pamt">R6,500 <small>/ month</small></div>
-<div class="psplit"><b>R5,000 media</b> + <b>R1,500 management</b></div>
-<div class="pinc"><span>Two channels</span><span>Full media plan</span><span>Weekly report with proofs of play</span><span>WhatsApp access to me</span></div>
-<a class="btn btn-ghost pcta" href="#contact" style="margin-top:28px">Start with Starter</a>
+<div class="sec-head rv"><span class="idx">03</span><span class="kicker" style="margin:0">Rate card</span></div>
+<h2 class="rv">Priced per thousand.<br>Proven per play.</h2>
+<p class="lede rv">Digital media sells in CPM: cost per thousand impressions. These are my working rates, published in the open. Your plan states the exact rate per channel before you commit, and it never moves without you knowing.</p>
+<div class="rate rv d1">
+<div class="rate-row"><div><div class="ch">Programmatic display</div><span class="nu">premium and long tail inventory, brand safe</span></div><div class="pr">from R45 <small>per 1,000 impressions</small></div></div>
+<div class="rate-row"><div><div class="ch">Paid social</div><span class="nu">Meta, TikTok, LinkedIn, creative testing included</span></div><div class="pr">from R50 <small>per 1,000 impressions</small></div></div>
+<div class="rate-row"><div><div class="ch">Retargeting</div><span class="nu">your existing traffic, brought back</span></div><div class="pr">from R30 <small>per 1,000 impressions</small></div></div>
+<div class="rate-row"><div><div class="ch">Online video</div><span class="nu">skippable and in-stream, viewable delivery</span></div><div class="pr">from R95 <small>per 1,000 impressions</small></div></div>
+<div class="rate-row"><div><div class="ch">Connected TV</div><span class="nu">living room attention, programmatic CTV</span></div><div class="pr">from R180 <small>per 1,000 impressions</small></div></div>
+<div class="rate-row"><div><div class="ch">Search</div><span class="nu">intent capture, tight structure</span></div><div class="pr">from R12 <small>per click</small></div></div>
+<div class="rate-row"><div><div class="ch">Outdoor digital</div><span class="nu">billboards to office towers, photo proof every play</span></div><div class="pr">from R0.90 <small>per play</small></div></div>
 </div>
+<div class="pgrid" style="margin-top:16px">
 <div class="card pcard pop rv d2">
-<div class="ptag">Most popular</div>
-<div class="pname">Growth</div>
-<div class="pamt">R23,000 <small>/ month</small></div>
-<div class="psplit"><b>R20,000 media</b> + <b>R3,000 management</b></div>
-<div class="pinc"><span>Everything in Starter</span><span>All digital channels plus outdoor</span><span>Structured creative testing</span><span>Biweekly optimization call</span></div>
-<a class="btn btn-primary pcta" href="#contact" style="margin-top:28px">Choose Growth</a>
-</div>
-<div class="card pcard rv d3">
-<div class="pname">Scale</div>
-<div class="pamt">R56,000 <small>/ month</small></div>
-<div class="psplit"><b>R50,000 media</b> + <b>R6,000 management</b></div>
-<div class="pinc"><span>Everything in Growth</span><span>Video, CTV and full outdoor rollouts</span><span>Custom reporting</span><span>Priority response</span></div>
-<a class="btn btn-ghost pcta" href="#contact" style="margin-top:28px">Go Scale</a>
+<div class="ptag">The only fee I earn</div>
+<div class="pname">Management</div>
+<div class="pamt">15%</div>
+<div class="pper" style="margin:6px 0 20px;color:var(--text-3);font-size:13.5px">of media spend, minimum R1,500 per month</div>
+<div class="pinc"><span>Media plan, trafficking and daily optimization</span><span>Weekly report with proofs of plays</span><span>WhatsApp access to me</span></div>
+<a class="btn btn-primary pcta" href="#contact" style="margin-top:28px">Get your rate card plan</a>
 </div>
 </div>
-<div class="pnote rv">Bigger than Scale? Management drops to <b>12% above R50,000 media and 10% above R150,000, automatically.</b> Smaller than Starter? Start on the R1,500 management minimum plus whatever media budget you have. <b>Month to month, no contracts, and the first media plan is free.</b></div>
+<div class="pnote rv">Worked example: R10,000 on display at R45 CPM buys about 222,000 impressions. The same R10,000 on outdoor at R0.90 a play buys about 11,000 plays, each one photo-verified. <b>Rates move with targeting, season and scale, and management drops to 12% above R50,000 media and 10% above R150,000, automatically.</b> No contracts, and the first plan is free.</div>
 </div>
 </section>
 
