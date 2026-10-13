@@ -164,6 +164,24 @@ section{padding:104px 0}
 .step p{color:var(--text-3);font-size:15px;margin-top:5px}
 /* industries */
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+/* industries detail */
+.igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:var(--sp-5)}
+details.ind{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);transition:transform var(--dur) var(--ease),border-color var(--dur)}
+details.ind:hover{transform:translateY(-3px);border-color:var(--line-strong)}
+details.ind[open]{border-color:var(--accent)}
+details.ind summary{cursor:pointer;list-style:none;padding:22px 24px;display:block}
+details.ind summary::-webkit-details-marker{display:none}
+details.ind summary h3{font-size:18px;font-weight:700;letter-spacing:-.2px;display:inline;vertical-align:middle}
+details.ind summary .fit{display:block;color:var(--text-3);font-size:13.5px;margin-top:6px}
+details.ind summary .more{display:inline-flex;align-items:center;gap:7px;color:var(--accent);font-size:13px;font-weight:600;margin-top:14px}
+details.ind summary .more .pl{font-size:18px;font-weight:300;transition:transform .25s}
+details.ind[open] .more .pl{transform:rotate(45deg)}
+details.ind[open] .more .txt::after{content:"the example media"}
+details.ind:not([open]) .more .txt::after{content:"see the example media"}
+.ind .inner{padding:0 24px 24px;font-size:14.5px}
+.ind .lbl{color:var(--accent);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;display:block;margin:14px 0 4px}
+.ind .inner p{color:var(--text-2)}
+.ind .inner p b{color:var(--text-1);font-weight:600;font-variant-numeric:tabular-nums}
 /* faq */
 details.faq{border-bottom:1px solid var(--line)}
 details.faq:first-of-type{border-top:1px solid var(--line)}
@@ -335,14 +353,108 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <section id="industries">
 <div class="wrap">
 <div class="sec-head rv"><span class="idx">05</span><span class="kicker" style="margin:0">Industries</span></div>
-<h2 class="rv">Any product. Any market.</h2>
-<p class="lede rv">Programmatic selling is not industry specific. The discipline transfers: understand the buyer, find them on the right screen, pay the right price. I sell media across sectors and I will sell yours.</p>
-<div class="chips rv d1">
-<span class="chip">Retail</span><span class="chip">E-commerce</span><span class="chip">Property</span><span class="chip">Automotive</span><span class="chip">Finance</span><span class="chip">Travel</span><span class="chip">Hospitality</span><span class="chip">Healthcare</span><span class="chip">Education</span><span class="chip">B2B</span><span class="chip">Entertainment</span><span class="chip">Startups</span>
+<h2 class="rv">Any product. Any market.<br>Open one.</h2>
+<p class="lede rv">Click any industry to see what its media actually looks like: the play, a worked example at real rate card prices, and the proof you receive. These are illustrative splits, your plan gets your numbers.</p>
+<div class="igrid">
+<details class="ind rv d1">
+<summary><h3>Retail</h3><span class="fit">Foot traffic, promotions, local pull.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Outdoor digital near your stores, paid social for promos, retargeting for the people who browsed.</p>
+<span class="lbl">Example split</span><p>R10,000: <b>R5,000</b> outdoor (about <b>5,500 plays</b>), <b>R4,000</b> social (about <b>80,000 impressions</b>), <b>R1,000</b> retargeting.</p>
+<span class="lbl">Your proof</span><p>A photo of your promotion on the screen outside your own store, timestamped.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>E-commerce</h3><span class="fit">Direct response, every rand accountable.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Search captures demand, paid social creates it, retargeting closes the ones who visited.</p>
+<span class="lbl">Example split</span><p>R15,000: <b>R6,000</b> search (about <b>500 clicks</b>), <b>R6,000</b> social (about <b>120,000 impressions</b>), <b>R3,000</b> retargeting (about <b>100,000 impressions</b>).</p>
+<span class="lbl">Your proof</span><p>Platform logs per product, verified cost per sale.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Property</h3><span class="fit">High value, long consideration cycle.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Video builds desire, search catches the serious, retargeting keeps you in the running for 60 days.</p>
+<span class="lbl">Example split</span><p>R12,000: <b>R5,000</b> video (about <b>52,000 impressions</b>), <b>R4,000</b> search, <b>R3,000</b> retargeting.</p>
+<span class="lbl">Your proof</span><p>Weekly logs showing which listing creative pulls enquiries.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Automotive</h3><span class="fit">Showroom traffic and model launches.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Roadside digital on commute routes, video for the launch, search for the cross shoppers.</p>
+<span class="lbl">Example split</span><p>R20,000: <b>R8,000</b> roadside (about <b>8,900 plays</b>), <b>R7,000</b> video, <b>R5,000</b> search.</p>
+<span class="lbl">Your proof</span><p>A photo of your model on the billboard on the N2, with play counts.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Finance</h3><span class="fit">Trust before transactions.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>CTV and premium display for credibility, search for the people actively comparing.</p>
+<span class="lbl">Example split</span><p>R15,000: <b>R6,000</b> CTV (about <b>33,000 impressions</b>), <b>R6,000</b> display (about <b>133,000 impressions</b>), <b>R3,000</b> search.</p>
+<span class="lbl">Your proof</span><p>Brand-safe placement logs, every impression accounted.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Travel</h3><span class="fit">Dreaming first, booking second.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Video sells the destination, social retargeting sells the package.</p>
+<span class="lbl">Example split</span><p>R15,000: <b>R6,000</b> video, <b>R5,000</b> social, <b>R4,000</b> retargeting.</p>
+<span class="lbl">Your proof</span><p>Viewable video logs plus retargeting pool growth, weekly.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Hospitality</h3><span class="fit">Local, last minute, high frequency.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Screens in malls and streets around your venue plus social for the weekend push.</p>
+<span class="lbl">Example split</span><p>R6,000: <b>R3,000</b> mall and street screens (about <b>3,300 plays</b>), <b>R3,000</b> social (about <b>60,000 impressions</b>).</p>
+<span class="lbl">Your proof</span><p>Photo proofs of your venue creative, Thursday to Sunday.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Healthcare</h3><span class="fit">Local trust, done respectfully.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Display on local news and search for the specific conditions and services you offer.</p>
+<span class="lbl">Example split</span><p>R8,000: <b>R4,000</b> display (about <b>89,000 impressions</b>), <b>R4,000</b> search (about <b>330 clicks</b>).</p>
+<span class="lbl">Your proof</span><p>Placement logs showing only the sites you approved.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Education</h3><span class="fit">Enrolment windows are everything.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Social and video through the window, search for the late deciders.</p>
+<span class="lbl">Example split</span><p>R12,000: <b>R5,000</b> social, <b>R4,000</b> search, <b>R3,000</b> video.</p>
+<span class="lbl">Your proof</span><p>Weekly cost per enquiry, channel by channel.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>B2B</h3><span class="fit">Few buyers, long cycles, high stakes.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>LinkedIn for the decision makers, search for the ones with budget approved, retargeting for the committee.</p>
+<span class="lbl">Example split</span><p>R15,000: <b>R6,000</b> LinkedIn, <b>R5,000</b> search, <b>R4,000</b> retargeting (about <b>133,000 impressions</b>).</p>
+<span class="lbl">Your proof</span><p>Company-level reach and click logs, every rand mapped.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Entertainment</h3><span class="fit">Sell the date out.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Street furniture near the venue plus social plus retargeting on the fence sitters.</p>
+<span class="lbl">Example split</span><p>R10,000: <b>R4,000</b> street screens (about <b>4,400 plays</b>), <b>R4,000</b> social, <b>R2,000</b> retargeting.</p>
+<span class="lbl">Your proof</span><p>Photo proofs of the event creative near the venue.</p>
+</div>
+</details>
+<details class="ind rv d1">
+<summary><h3>Startups</h3><span class="fit">First campaign, honest budget.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<div class="inner">
+<span class="lbl">The play</span><p>Two channels maximum, find the winner, scale it. Management sits at the R1,500 floor.</p>
+<span class="lbl">Example split</span><p>R5,000: <b>R3,000</b> social (about <b>60,000 impressions</b>), <b>R2,000</b> display (about <b>44,000 impressions</b>).</p>
+<span class="lbl">Your proof</span><p>The same weekly proofs the big accounts get, no small-client tier.</p>
+</div>
+</details>
 </div>
 </div>
 </section>
-
 
 <section id="principles">
 <div class="wrap">
