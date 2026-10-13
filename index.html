@@ -454,7 +454,7 @@ var MIX={
  launch:{video:.35,social:.30,display:.15,outdoor:.15,retargeting:.05}};
 var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 var goal="steady",mix="balanced",audPlay=3;
-function r(n){return "R"+Math.round(n).toLocaleString("en-ZA")}
+function r(n){return "R"+Math.round(n).toLocaleString("en-US")}
 function fee(monthlyMedia){var pct=monthlyMedia>150000?0.10:(monthlyMedia>50000?0.12:0.15);return {f:Math.max(monthlyMedia*pct,1500),pct:pct}}
 function render(){
  var budget=parseFloat(document.getElementById("pb-budget").value);
@@ -466,15 +466,15 @@ function render(){
   days+='<div class="pf-day"><div class="pf-daybar" style="height:'+Math.max(4,Math.round(w[i]/1.65*120))+'px"></div><span>'+DAYS[i]+'</span><b>'+r(amt)+'</b></div>';}
  document.getElementById("pb-days").innerHTML=days;
  var m=MIX[mix],chans="",split=[];
- Object.keys(m).forEach(function(k){var amt=budget*m[k];split.push({k:k,amt:amt,aud:audOf(amt})});
+ Object.keys(m).forEach(function(k){var amt=budget*m[k];split.push({k:k,amt:amt,aud:audOf(amt)});});
  split.sort(function(a,b){return b.amt-a.amt});
  split.forEach(function(x){
-  var vol=x.k==="search"?(x.amt/RATE.search)+" clicks":(x.k==="outdoor"?Math.round(x.amt/RATE.outdoor).toLocaleString("en-ZA")+" plays":Math.round(x.amt/RATE[x.k]*1000).toLocaleString("en-ZA")+" impressions");
+  var vol=x.k==="search"?(x.amt/RATE.search)+" clicks":(x.k==="outdoor"?Math.round(x.amt/RATE.outdoor).toLocaleString("en-US")+" plays":Math.round(x.amt/RATE[x.k]*1000).toLocaleString("en-US")+" impressions");
   chans+='<div class="pf-chrow"><span>'+NAMES[x.k]+'</span><div><i>'+vol+'</i><b>'+r(x.amt)+'</b></div></div>';});
  document.getElementById("pb-chans").innerHTML=chans;
  var monthly=budget*4.33,fx=fee(monthly);
  document.getElementById("pb-t-media").textContent=r(budget);
- document.getElementById("pb-t-aud").textContent=Math.round(aud).toLocaleString("en-ZA");
+ document.getElementById("pb-t-aud").textContent=Math.round(aud).toLocaleString("en-US");
  document.getElementById("pb-t-fee").textContent=r(fx.f)+" / mo";
  document.getElementById("pb-t-mo").textContent=r(monthly+fx.f);
  document.getElementById("pb-peak").textContent=PEAKS[goal];
