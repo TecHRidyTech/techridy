@@ -178,8 +178,8 @@ details.ind summary .fit{display:block;color:var(--text-3);font-size:13.5px;marg
 details.ind summary .more{display:inline-flex;align-items:center;gap:7px;color:var(--accent);font-size:13px;font-weight:600;margin-top:14px}
 details.ind summary .more .pl{font-size:18px;font-weight:300;transition:transform .25s}
 details.ind[open] .more .pl{transform:rotate(45deg)}
-details.ind[open] .more .txt::after{content:"the example media"}
-details.ind:not([open]) .more .txt::after{content:"see the example media"}
+details.ind[open] .more .txt::after{content:"close the example"}
+details.ind:not([open]) .more .txt::after{content:"see an example plan"}
 .ind .inner{padding:0 24px 24px;font-size:14.5px}
 .ind .lbl{color:var(--accent);font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;display:block;margin:14px 0 4px}
 .ind .inner p{color:var(--text-2)}
@@ -374,7 +374,7 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <p class="img-cr">Screen and venue photos via CAASie.co.</p>
 <div class="igrid">
 <details class="ind rv d1">
-<summary><h3>Retail</h3><span class="fit">Foot traffic, promotions, local pull.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<summary><h3>Retail</h3><span class="fit">Foot traffic, promotions, nearby customers.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
 <div class="inner">
 <span class="lbl">The play</span><p>Outdoor digital near your stores, paid social for promos, retargeting for the people who browsed.</p>
 <span class="lbl">Example split</span><p>R10,000: <b>R5,000</b> outdoor (about <b>5,500 plays</b>), <b>R4,000</b> social (about <b>80,000 impressions</b>), <b>R1,000</b> retargeting.</p>
@@ -394,7 +394,7 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <details class="ind rv d1">
 <summary><h3>Property</h3><span class="fit">High value, long consideration cycle.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
 <div class="inner">
-<span class="lbl">The play</span><p>Video builds desire, search catches the serious, retargeting keeps you in the running for 60 days.</p>
+<span class="lbl">The play</span><p>Video builds desire, search catches the serious buyers, retargeting keeps your listing in front of them for 60 days.</p>
 <span class="lbl">Example split</span><p>R12,000: <b>R5,000</b> video (about <b>52,000 impressions</b>), <b>R4,000</b> search, <b>R3,000</b> retargeting.</p>
 <span class="lbl">Your proof</span><p>Weekly logs showing which listing creative pulls enquiries.</p>
 <img class="board-img" loading="lazy" src="Office_Port.png" alt="Office tower screen example">
@@ -404,7 +404,7 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <details class="ind rv d1">
 <summary><h3>Automotive</h3><span class="fit">Showroom traffic and model launches.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
 <div class="inner">
-<span class="lbl">The play</span><p>Roadside digital on commute routes, video for the launch, search for the cross shoppers.</p>
+<span class="lbl">The play</span><p>Roadside digital on commute routes, video for the launch, search for the people comparing models.</p>
 <span class="lbl">Example split</span><p>R20,000: <b>R8,000</b> roadside (about <b>8,900 plays</b>), <b>R7,000</b> video, <b>R5,000</b> search.</p>
 <span class="lbl">Your proof</span><p>A photo of your model on the billboard on the N2, with play counts.</p>
 <img class="board-img" loading="lazy" src="Billboard_Mockup_Unsplash.png" alt="Roadside billboard example">
@@ -422,7 +422,7 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <details class="ind rv d1">
 <summary><h3>Travel</h3><span class="fit">Dreaming first, booking second.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
 <div class="inner">
-<span class="lbl">The play</span><p>Video sells the destination, social retargeting sells the package.</p>
+<span class="lbl">The play</span><p>Video sells the destination, retargeting sells the package.</p>
 <span class="lbl">Example split</span><p>R15,000: <b>R6,000</b> video, <b>R5,000</b> social, <b>R4,000</b> retargeting.</p>
 <span class="lbl">Your proof</span><p>Viewable video logs plus retargeting pool growth, weekly.</p>
 </div>
@@ -440,7 +440,7 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <details class="ind rv d1">
 <summary><h3>Healthcare</h3><span class="fit">Local trust, done respectfully.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
 <div class="inner">
-<span class="lbl">The play</span><p>Display on local news and search for the specific conditions and services you offer.</p>
+<span class="lbl">The play</span><p>Display on local news, search for the services you actually offer.</p>
 <span class="lbl">Example split</span><p>R8,000: <b>R4,000</b> display (about <b>89,000 impressions</b>), <b>R4,000</b> search (about <b>330 clicks</b>).</p>
 <span class="lbl">Your proof</span><p>Placement logs showing only the sites you approved.</p>
 <img class="board-img" loading="lazy" src="Square_waitingroom_201128.png" alt="Medical waiting room screen example">
@@ -458,15 +458,15 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <details class="ind rv d1">
 <summary><h3>B2B</h3><span class="fit">Few buyers, long cycles, high stakes.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
 <div class="inner">
-<span class="lbl">The play</span><p>LinkedIn for the decision makers, search for the ones with budget approved, retargeting for the committee.</p>
+<span class="lbl">The play</span><p>LinkedIn for the decision makers, search for the ones with budget approved, retargeting for the whole buying committee.</p>
 <span class="lbl">Example split</span><p>R15,000: <b>R6,000</b> LinkedIn, <b>R5,000</b> search, <b>R4,000</b> retargeting (about <b>133,000 impressions</b>).</p>
 <span class="lbl">Your proof</span><p>Company-level reach and click logs, every rand mapped.</p>
 </div>
 </details>
 <details class="ind rv d1">
-<summary><h3>Entertainment</h3><span class="fit">Sell the date out.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
+<summary><h3>Entertainment</h3><span class="fit">Sell the event out.</span><span class="more"><span class="pl">+</span><span class="txt"></span></span></summary>
 <div class="inner">
-<span class="lbl">The play</span><p>Street furniture near the venue plus social plus retargeting on the fence sitters.</p>
+<span class="lbl">The play</span><p>Street furniture near the venue, social for the buzz, retargeting for the fence sitters.</p>
 <span class="lbl">Example split</span><p>R10,000: <b>R4,000</b> street screens (about <b>4,400 plays</b>), <b>R4,000</b> social, <b>R2,000</b> retargeting.</p>
 <span class="lbl">Your proof</span><p>Photo proofs of the event creative near the venue.</p>
 <img class="board-img" loading="lazy" src="Bus_shelter_mockup.png" alt="Bus shelter screen example">
