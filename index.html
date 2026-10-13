@@ -209,41 +209,6 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--text-3);font-
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.ticker .track{animation:none}}
 @media(max-width:840px){.split{grid-template-columns:1fr}.hero{padding-top:150px}section{padding:76px 0}nav .links a.lnk{display:none}nav a.navcta{display:inline-flex}}
 
-/* planner */
-.plan-grid{display:grid;grid-template-columns:340px 1fr;gap:20px;margin-top:44px;align-items:start}
-@media(max-width:940px){.plan-grid{grid-template-columns:1fr}}
-.pf-card{padding:26px}
-.pf-lbl{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:1.8px;color:var(--text-3);text-transform:uppercase;margin:22px 0 10px}
-.pf-lbl:first-child{margin-top:0}
-.pf-bud{font-size:26px;font-weight:800;color:var(--text);letter-spacing:-.4px}
-.pf-bud small{font-size:13px;color:var(--text-3);font-weight:500;letter-spacing:0}
-input[type=range]{width:100%;accent-color:var(--accent);margin-top:12px}
-.seg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
-.seg.seg4{grid-template-columns:1fr 1fr}
-.seg button{background:transparent;border:1px solid var(--line);border-radius:var(--r-sm);color:var(--text-2);font-size:13px;font-weight:600;padding:9px 4px;cursor:pointer;font-family:inherit;transition:all .2s}
-.seg button:hover{border-color:var(--accent);color:var(--text)}
-.seg button.on{background:var(--accent);border-color:var(--accent);color:#0C0E12}
-select.pf-sel{width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-sm);color:var(--text);font-family:inherit;font-size:14px;padding:10px 12px;cursor:pointer}
-.pf-out{padding:26px}
-.pf-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
-.pf-tile{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:14px 16px}
-.pf-tile b{display:block;font-size:19px;font-weight:800;letter-spacing:-.3px;margin-top:6px}
-.pf-tile span{font-family:var(--mono);font-size:10.5px;letter-spacing:1.6px;color:var(--text-3);text-transform:uppercase}
-.pf-h{font-family:var(--mono);font-size:11.5px;letter-spacing:1.8px;color:var(--text-3);text-transform:uppercase;margin:26px 0 14px}
-.pf-days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;align-items:end}
-.pf-daybar{background:var(--accent);border-radius:4px 4px 0 0;min-height:4px;opacity:.9;transition:height .3s}
-.pf-day{display:flex;flex-direction:column;align-items:center;gap:8px}
-.pf-day span{font-family:var(--mono);font-size:11px;color:var(--text-3)}
-.pf-day b{font-size:12.5px;color:var(--text);font-weight:700}
-.pf-chrow{display:flex;justify-content:space-between;align-items:baseline;padding:11px 2px;border-top:1px solid var(--line);font-size:14.5px}
-.pf-chrow:first-of-type{border-top:none}
-.pf-chrow span{color:var(--text-2)}
-.pf-chrow b{font-variant-numeric:tabular-nums}
-.pf-chrow i{font-style:normal;color:var(--text-3);font-size:12.5px;margin-right:10px}
-.pf-note{margin-top:22px;padding:14px 18px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-sm);font-size:13.5px;color:var(--text-2)}
-.pf-note b{color:var(--text)}
-.pf-peak{margin-top:14px;font-size:13px;color:var(--text-3)}
-.pf-copy{margin-top:20px;width:100%;justify-content:center}
 </style>
 </head>
 <body>
@@ -258,7 +223,6 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <a class="lnk" href="#proof">Proof of plays</a>
 <a class="lnk" href="#media">Media</a>
 <a class="lnk" href="#rates">Rate card</a>
-<a class="lnk" href="#planner">Plan builder</a>
 <a class="lnk" href="#faq">FAQ</a>
 <a class="navcta" href="#contact">WhatsApp me</a>
 </div>
@@ -273,7 +237,7 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 <div class="slogan rv in d2">Flourishing with Growth</div>
 <p class="rv in d2">I sell advertising across digital and outdoor screens: bought programmatically, paid per play, and every play comes back with proof. A photo of your ad on the actual screen, the exact time it ran, and the numbers behind it. No black box reporting, ever.</p>
 <div class="btn-row rv in d4">
-<a class="btn btn-primary" href="#planner">Build your media plan</a>
+<a class="btn btn-primary" href="#contact">Get a free media plan</a>
 <a class="btn btn-ghost" href="#proof">See a proof of play</a>
 </div>
 <div class="trust rv in d4">
@@ -385,133 +349,13 @@ VERDANT<span style="color:var(--accent)">MEDIA</span>
 </div>
 </section>
 
-<section id="planner" class="sec rv">
-<div class="wrap">
-<div class="shead"><span class="idx">04</span><div><h2 class="kick" style="margin:0">Plan builder</h2></div></div>
-<p class="lede" style="margin-top:18px">Set a weekly budget and a goal. The builder schedules it the way I would: spend lands where attention is highest, not spread thin across the week. Every number comes from the published rate card.</p>
-<div class="plan-grid">
-<div class="card pf-card">
-<span class="pf-lbl">Weekly media budget</span>
-<div class="pf-bud"><b id="pb-bud-out">R15,000</b> <small>per week</small></div>
-<input type="range" id="pb-budget" min="2500" max="100000" step="500" value="15000" aria-label="Weekly media budget">
-<span class="pf-lbl">Goal</span>
-<div class="seg" id="pb-goal">
-<button class="on" data-g="steady">Steady reach</button>
-<button data-g="weekend">Weekend push</button>
-<button data-g="commute">Commute capture</button>
-</div>
-<span class="pf-lbl">Channel mix</span>
-<div class="seg seg4" id="pb-mix">
-<button class="on" data-m="balanced">Balanced</button>
-<button data-m="outdoor">Outdoor led</button>
-<button data-m="digital">Digital led</button>
-<button data-m="launch">Launch</button>
-</div>
-<span class="pf-lbl">Outdoor venue</span>
-<select class="pf-sel" id="pb-venue">
-<option value="0.90" selected>Billboards, gyms, fuel (R0.90 a play)</option>
-<option value="1.25">Street, retail, offices (R1.25 a play)</option>
-<option value="1.40">Medical centres (R1.40 a play)</option>
-<option value="2.15">Train stations (R2.15 a play)</option>
-</select>
-<p class="pf-peak" id="pb-peak"></p>
-</div>
-<div class="card pf-out">
-<div class="pf-tiles">
-<div class="pf-tile"><span>Weekly media</span><b id="pb-t-media">R15,000</b></div>
-<div class="pf-tile"><span>Est. weekly audience</span><b id="pb-t-aud">87,300</b></div>
-<div class="pf-tile"><span>Management fee</span><b id="pb-t-fee">R9,750</b></div>
-<div class="pf-tile"><span>Monthly commitment</span><b id="pb-t-mo">R79,250</b></div>
-</div>
-<div class="pf-h">Best weekly schedule</div>
-<div class="pf-days" id="pb-days"></div>
-<div class="pf-h">Channel split</div>
-<div id="pb-chans"></div>
-<div class="pf-note" id="pb-note"></div>
-<button class="btn btn-primary pf-copy" id="pb-copy">Copy this plan</button>
-</div>
-</div>
-<p class="img-cr" style="margin-top:26px">Estimates use the published rate card and CAASie platform pricing. The plan is yours to keep, take it to any buyer.</p>
-</div>
-</section>
 
-<script>
-(function(){
-var RATE={display:45/1000,social:50/1000,retargeting:30/1000,video:95/1000,search:12,outdoor:0.90};
-var NAMES={display:"Programmatic display",social:"Paid social",retargeting:"Retargeting",video:"Video",search:"Search",outdoor:"Outdoor digital"};
-var WEIGHTS={
- steady:[1,1,1,1,1,1,1],
- weekend:[0.55,0.55,0.75,1.15,1.5,1.65,1.35],
- commute:[1.45,1.45,1.35,1.4,1.3,0.5,0.5]};
-var PEAKS={
- steady:"Even pacing all week, 06:00 to 22:00. The always on option for brands building reach.",
- weekend:"Weighted to Thursday through Sunday, 10:00 to 22:00, where retail and venue audiences peak.",
- commute:"Weighted to Monday to Friday, peaks at 06:00 to 09:00 and 16:00 to 19:00. Built for people on the move."};
-var MIX={
- balanced:{display:.25,social:.25,outdoor:.30,retargeting:.10,search:.10},
- outdoor:{outdoor:.55,display:.15,social:.15,retargeting:.08,search:.07},
- digital:{display:.25,social:.30,search:.15,retargeting:.20,video:.10},
- launch:{video:.35,social:.30,display:.15,outdoor:.15,retargeting:.05}};
-var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
-var goal="steady",mix="balanced",audPlay=3;
-function r(n){return "R"+Math.round(n).toLocaleString("en-US")}
-function fee(monthlyMedia){var pct=monthlyMedia>150000?0.10:(monthlyMedia>50000?0.12:0.15);return {f:Math.max(monthlyMedia*pct,1500),pct:pct}}
-function render(){
- var budget=parseFloat(document.getElementById("pb-budget").value);
- RATE.outdoor=parseFloat(document.getElementById("pb-venue").value);
- document.getElementById("pb-bud-out").textContent=r(budget);
- var w=WEIGHTS[goal],ws=w.reduce(function(a,b){return a+b},0);
- var days="",aud=0,plTable="";
- for(var i=0;i<7;i++){var amt=budget*w[i]/ws;aud+=audOf(amt);
-  days+='<div class="pf-day"><div class="pf-daybar" style="height:'+Math.max(4,Math.round(w[i]/1.65*120))+'px"></div><span>'+DAYS[i]+'</span><b>'+r(amt)+'</b></div>';}
- document.getElementById("pb-days").innerHTML=days;
- var m=MIX[mix],chans="",split=[];
- Object.keys(m).forEach(function(k){var amt=budget*m[k];split.push({k:k,amt:amt,aud:audOf(amt)});});
- split.sort(function(a,b){return b.amt-a.amt});
- split.forEach(function(x){
-  var vol=x.k==="search"?(x.amt/RATE.search)+" clicks":(x.k==="outdoor"?Math.round(x.amt/RATE.outdoor).toLocaleString("en-US")+" plays":Math.round(x.amt/RATE[x.k]).toLocaleString("en-US")+" impressions");
-  chans+='<div class="pf-chrow"><span>'+NAMES[x.k]+'</span><div><i>'+vol+'</i><b>'+r(x.amt)+'</b></div></div>';});
- document.getElementById("pb-chans").innerHTML=chans;
- var monthly=budget*4.33,fx=fee(monthly);
- document.getElementById("pb-t-media").textContent=r(budget);
- document.getElementById("pb-t-aud").textContent=Math.round(aud).toLocaleString("en-US");
- document.getElementById("pb-t-fee").textContent=r(fx.f)+" / mo";
- document.getElementById("pb-t-mo").textContent=r(monthly+fx.f);
- document.getElementById("pb-peak").textContent=PEAKS[goal];
- var pct=Math.round(WEIGHTS[goal].slice(4).reduce(function(a,b){return a+b},0)/ws*100);
- document.getElementById("pb-note").innerHTML="<b>"+(goal==="weekend"?pct+"% of spend lands Thursday to Sunday":(goal==="commute"?"73% of spend lands Monday to Friday":"Even pacing, seven days a week"))+"</b>, because that is when your audience is actually on these screens. Fee shown at "+(fx.pct*100)+"% of monthly media (volume rates apply automatically). All figures are estimates, your plan gets your numbers.";
- window.__planText="VerdantMedia weekly media plan\nBudget: "+r(budget)+" per week\nGoal: "+document.querySelector("#pb-goal .on").textContent+"\nSchedule: "+DAYS.map(function(d,i){return d+" "+r(budget*w[i]/ws)}).join(" | ")+"\nSplit: "+split.map(function(x){return NAMES[x.k]+" "+r(x.amt)}).join(", ")+"\nManagement: "+r(fx.f)+" per month ("+(fx.pct*100)+"%)\nEstimates from the published rate card. The plan is yours, take it to any buyer.";
-}
-function audOf(amt){var t=0,m=MIX[mix];
- Object.keys(m).forEach(function(k){var a=amt*m[k];
-  if(k==="search"){t+=a/RATE.search*0.05}
-  else if(k==="outdoor"){t+=a/RATE.outdoor*audPlay}
-  else{t+=a/RATE[k]}});
- return t}
-document.getElementById("pb-budget").addEventListener("input",render);
-document.getElementById("pb-venue").addEventListener("change",render);
-Array.prototype.forEach.call(document.querySelectorAll("#pb-goal button"),function(b){
- b.addEventListener("click",function(){goal=b.dataset.g;
-  Array.prototype.forEach.call(document.querySelectorAll("#pb-goal button"),function(x){x.classList.toggle("on",x===b)});
-  render()})});
-Array.prototype.forEach.call(document.querySelectorAll("#pb-mix button"),function(b){
- b.addEventListener("click",function(){mix=b.dataset.m;
-  Array.prototype.forEach.call(document.querySelectorAll("#pb-mix button"),function(x){x.classList.toggle("on",x===b)});
-  render()})});
-document.getElementById("pb-copy").addEventListener("click",function(){
- var t=window.__planText||"",btn=this;
- function done(){btn.textContent="Copied. Paste it anywhere.";setTimeout(function(){btn.textContent="Copy this plan"},2200)}
- if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done)}
- else{var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand("copy")}catch(e){}document.body.removeChild(ta);done()}});
-render();
-})();
-</script>
 
 <section id="process">
 <div class="wrap">
 <div class="split">
 <div>
-<div class="sec-head rv"><span class="idx">05</span><span class="kicker" style="margin:0">Process</span></div>
+<div class="sec-head rv"><span class="idx">04</span><span class="kicker" style="margin:0">Process</span></div>
 <h2 class="rv">A plan first.<br>Then the spend.</h2>
 <p class="lede rv">Nothing goes live until you have seen, in writing, where your money goes and what proof you will get for it.</p>
 </div>
@@ -527,7 +371,7 @@ render();
 
 <section id="industries">
 <div class="wrap">
-<div class="sec-head rv"><span class="idx">06</span><span class="kicker" style="margin:0">Industries</span></div>
+<div class="sec-head rv"><span class="idx">05</span><span class="kicker" style="margin:0">Industries</span></div>
 <h2 class="rv">Any product. Any market.<br>Open one.</h2>
 <p class="lede rv">Click any industry to see what its media actually looks like: the play, a worked example at real rate card prices, the proof you receive, and for outdoor, live Cape Town boards from the CAASie map at today's prices. These are illustrative splits, your plan gets your numbers.</p>
 <p class="img-cr">Screen and venue photos via CAASie.co. Healthcare photo: Harrison Keely via Wikimedia Commons, CC BY 4.0.</p>
@@ -648,7 +492,7 @@ render();
 
 <section id="principles">
 <div class="wrap">
-<div class="sec-head rv"><span class="idx">07</span><span class="kicker" style="margin:0">How I work</span></div>
+<div class="sec-head rv"><span class="idx">06</span><span class="kicker" style="margin:0">How I work</span></div>
 <h2 class="rv">Three rules.<br>Non-negotiable.</h2>
 <p class="lede rv">These are not marketing lines. They are the operating conditions every campaign runs under, and you can hold me to any of them, in writing.</p>
 <div class="grid">
@@ -661,7 +505,7 @@ render();
 
 <section id="faq">
 <div class="wrap">
-<div class="sec-head rv"><span class="idx">08</span><span class="kicker" style="margin:0">FAQ</span></div>
+<div class="sec-head rv"><span class="idx">07</span><span class="kicker" style="margin:0">FAQ</span></div>
 <h2 class="rv">Straight answers.</h2>
 <div style="margin-top:36px">
 <details class="faq rv d1">
