@@ -469,7 +469,7 @@ function render(){
  Object.keys(m).forEach(function(k){var amt=budget*m[k];split.push({k:k,amt:amt,aud:audOf(amt)});});
  split.sort(function(a,b){return b.amt-a.amt});
  split.forEach(function(x){
-  var vol=x.k==="search"?(x.amt/RATE.search)+" clicks":(x.k==="outdoor"?Math.round(x.amt/RATE.outdoor).toLocaleString("en-US")+" plays":Math.round(x.amt/RATE[x.k]*1000).toLocaleString("en-US")+" impressions");
+  var vol=x.k==="search"?(x.amt/RATE.search)+" clicks":(x.k==="outdoor"?Math.round(x.amt/RATE.outdoor).toLocaleString("en-US")+" plays":Math.round(x.amt/RATE[x.k]).toLocaleString("en-US")+" impressions");
   chans+='<div class="pf-chrow"><span>'+NAMES[x.k]+'</span><div><i>'+vol+'</i><b>'+r(x.amt)+'</b></div></div>';});
  document.getElementById("pb-chans").innerHTML=chans;
  var monthly=budget*4.33,fx=fee(monthly);
@@ -486,7 +486,7 @@ function audOf(amt){var t=0,m=MIX[mix];
  Object.keys(m).forEach(function(k){var a=amt*m[k];
   if(k==="search"){t+=a/RATE.search*0.05}
   else if(k==="outdoor"){t+=a/RATE.outdoor*audPlay}
-  else{t+=a/RATE[k]*1000}});
+  else{t+=a/RATE[k]}});
  return t}
 document.getElementById("pb-budget").addEventListener("input",render);
 document.getElementById("pb-venue").addEventListener("change",render);
